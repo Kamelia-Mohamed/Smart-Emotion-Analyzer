@@ -20,6 +20,7 @@ function App() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Bypass-Tunnel-Reminder': 'true'
         },
         body: JSON.stringify({ image: imageSrc }),
       });

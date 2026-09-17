@@ -8,14 +8,14 @@ for i in range(5):
     if temp_cap.isOpened():
         ret, frame = temp_cap.read()
         if ret:
-            print(f"✅ Camera successfully connected at index: {i}")
+            print(f" Camera successfully connected at index: {i}")
             cap = temp_cap
             break
         else:
             temp_cap.release()
 
 if not cap or not cap.isOpened():
-    print("❌ Still no camera found.")
+    print(" Still no camera found.")
 else:
     print("⏳ AI Model is ready. Analyzing every 15 frames for better stability...")
     
@@ -26,7 +26,7 @@ else:
     while True:
         ret, frame = cap.read()
         if not ret:
-            print("❌ Failed to grab frame.")
+            print(" Failed to grab frame.")
             break
             
         frame = cv2.flip(frame, 1)
