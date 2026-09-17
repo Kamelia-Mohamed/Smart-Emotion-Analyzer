@@ -16,7 +16,7 @@ function App() {
 
     try {
       // Send the image to our Flask API
-      const response = await fetch('https://fast-chefs-act.loca.lt/analyze', {
+      const response = await fetch('https://sharp-roses-go.loca.lt/analyze', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

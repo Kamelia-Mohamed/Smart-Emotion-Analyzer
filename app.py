@@ -1,5 +1,8 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+app = Flask(__name__)
+CORS(app)  # هذا السطر السحري يحل مشكلة الـ CORS تماماً
+from flask_cors import CORS
 import cv2
 import numpy as np
 import base64
