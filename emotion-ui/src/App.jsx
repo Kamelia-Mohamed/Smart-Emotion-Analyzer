@@ -16,7 +16,7 @@ function App() {
 
     try {
       // Send the image to our Flask API
-      const response = await fetch('https://fast-chefs-act.loca.lt', {
+      const response = await fetch('https://fast-chefs-act.loca.lt/analyze', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ function App() {
 
   return (
     <div style={{ textAlign: 'center', marginTop: '40px', fontFamily: 'Arial, sans-serif' }}>
-      <h1>🧠 Smart Emotion Analyzer</h1>
+      <h1> Smart Emotion Analyzer</h1>
       
       <div style={{ margin: '20px auto', width: 'fit-content', padding: '10px', backgroundColor: '#f0f0f0', borderRadius: '10px' }}>
         <Webcam
@@ -82,7 +82,7 @@ function App() {
           marginTop: '10px'
         }}
       >
-        {isAnalyzing ? "Stop Analysis 🛑" : "Start Analysis ▶️"}
+        {isAnalyzing ? "Stop Analysis " : "Start Analysis "}
       </button>
     </div>
   );
